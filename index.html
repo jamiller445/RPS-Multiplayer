@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RockPaperScisors</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+
+    
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="style.css" /> -->
+    <style type="text/css">
+
+        .p1-btn {
+            display: none;
+        }
+
+        .p2-btn {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- tutoriapoints -->
+   
+<div class="container">
+    <header class="text-center">
+        <h1 class="p-t-1">Rock, Paper or Scissors?</h1>                    
+    </header>
+    <hr>
+                
+    <!-- row 1: input name -->
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-4">
+        <!-- <p></p> -->
+        </div>
+        <!-- middle column -->
+        <div class="col-md-4" id="input-area">
+            <p class="text-center">
+                Enter your name and then click play!
+            </p>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="playerName" placeholder="Players Name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" id="play" type="button">Play!</button>
+                        </div>
+                </div>
+
+                <!-- playerInfo area -->
+                <div class="card" style="width: 18rem;">
+                        <div class="card-body text-center">
+                            <!-- <h5 class="card-title" id="playerInfo">Player info area</h5> -->
+                            <h6 class="card-title ">Player info area</h6>
+                            <div id="playerInfo"></div>
+                            <div id="results"></div>
+                        </div>
+                </div>                    
+
+        </div>
+    <!-- close first row -->
+    </div>
+
+    <!-- open row 2 -->
+    <div class="row mt-3">
+        <!-- open left card -->
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body ml-0 text-center">
+                    <!-- <h5 class="card-title" id="playerInfo"></h5> -->
+
+                    <div id="playerTurn"></div>
+
+                    <div id="player1">
+                        <div id="p1name">Waiting for Player 1</div>
+                        <div id="p1choices"></div>
+                        <div class="p1-btn">
+                            <div class="btn-group btn-group-sm">
+                                <button type="button" class="btn btn-primary rock">Rock</button>
+                                <button type="button" class="btn btn-primary paper">Paper</button>
+                                <button type="button" class="btn btn-primary scissors">Scissors</button>
+                            </div>
+                        </div>
+
+                        
+                        <div id="p1stats"></div>
+                        <!-- <div id="results"></div> -->
+                    </div>
+
+                <!-- close left side card body-->
+                </div>
+            <!-- close left side card -->
+            </div>
+        <!-- close left side colulmn -->
+        </div>
+    
+        <!-- div for middle column Chat Area -->
+        <div class="col-md-4">
+                <div class="card mt-3" style="width: 18rem;">
+                        
+                        <div class="card-body">
+                            <!-- <h5 class="card-title ">Enter text</h5> -->
+                        </div>
+                </div>
+        </div>
+
+        <!-- open the right side column -->
+        <div class="col-md-4">
+
+            <!-- right side card -->
+            <div class="card" style="width: 18rem;">
+                    <div class="card-body text-center">
+                      <!-- <h5 class="card-title" id="playerInfo"></h5> -->
+
+                      <div id="playerTurn"></div>
+
+                      <div id="player2">
+                            <div id="p2name">Waiting for Player 2</div>
+                            <div id="p2choices"></div>
+
+                            <div class="p2-btn">
+                                <div class="btn-group btn-group-sm p2-btn-selection">
+                                    <button type="button" class="btn btn-primary rock">Rock</button>
+                                    <button type="button" class="btn btn-primary paper">Paper</button>
+                                    <button type="button" class="btn btn-primary scissors">Scissors</button>
+                                </div>
+                            </div>
+
+                            
+                            <div id="p2stats"></div> 
+                            <!-- <div id="results"></div>                               -->
+                        </div>
+                    <!-- close right side card body-->
+                    </div>
+            <!-- close right side card -->
+            </div>
+        <!-- close right side colulmn -->
+        </div>
+    <!-- close row 2 -->
+    </div>
+
+    <!-- open row 3 -->
+    <div class="row mt-3">
+            <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header"><h5>Chat</h5></div>
+                        <br>
+                        <h5>Message Area</h5>
+                        <div class="card-body ml-0 chatbox"></div>
+                        <div class="card-body mt-1">
+                            
+                                <div class="input-group mb-3">
+                                        <!-- <input type="text" class="form-control" id="messageBox" placeholder="Message Text" aria-label="Recipient's username" aria-describedby="basic-addon2"> -->
+                                        <input type="text" class="form-control" id="messageBox" aria-label="Recipient's username" aria-describedby="basic-addon2">    
+                                        <div class="input-group-append">
+                                                <button class="btn btn-outline-secondary" id="chat" type="button">Send Message!</button>
+                                            </div>
+                                    </div>                          
+                        </div>
+                    </div>
+            </div>        
+
+
+    <!-- Close row 3 -->
+    </div>
+
+
+<script src="./assets/javascript/multiRPS.js"></script>
+
+<!-- close the container -->
+</div>
+                                
+</body>
+</html>
