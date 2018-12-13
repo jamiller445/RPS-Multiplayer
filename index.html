@@ -1,3 +1,5 @@
+
+<!-- RPS Multiplayer -->
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -5,8 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>RockPaperScisors</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--Added link to Reset Style-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
@@ -28,7 +34,6 @@
 </head>
 
 <body>
-    <!-- tutoriapoints -->
    
 <div class="container">
     <header class="text-center">
@@ -89,9 +94,7 @@
                             </div>
                         </div>
 
-                        
                         <div id="p1stats"></div>
-                        <!-- <div id="results"></div> -->
                     </div>
 
                 <!-- close left side card body-->
@@ -156,8 +159,7 @@
                         <div class="card-body ml-0 chatbox"></div>
                         <div class="card-body mt-1">
                             
-                                <div class="input-group mb-3">
-                                        <!-- <input type="text" class="form-control" id="messageBox" placeholder="Message Text" aria-label="Recipient's username" aria-describedby="basic-addon2"> -->
+                                <div class="input-group mb-3">                                        
                                         <input type="text" class="form-control" id="messageBox" aria-label="Recipient's username" aria-describedby="basic-addon2">    
                                         <div class="input-group-append">
                                                 <button class="btn btn-outline-secondary" id="chat" type="button">Send Message!</button>

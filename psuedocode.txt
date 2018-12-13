@@ -1,4 +1,3 @@
-# RPS-Multiplayer
 
 Psuedo Code For firebase Multi Player Rock Paper Scissors
 
@@ -84,4 +83,12 @@ game box and the winner is announced in the middle box.
 Display the game score in the bottom of each players box.  Reset the game and play a second round.
 
 Added functionality - add a chat box at the bottom of the page.
+
+
+
+
+
+
+
+
 
